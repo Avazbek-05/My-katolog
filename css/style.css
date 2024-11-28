@@ -1,0 +1,49 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+.container1 {
+  width: 90%;
+  margin: 0 auto;
+}
+@media (min-width: 1400px) {
+  .container1 {
+    width: 1350px;
+    margin: 0 auto;
+  }
+}
+@media (max-width: 640px) {
+  .menu-bar {
+    position: fixed;
+    top: 0;
+    right: -100%;
+    width: 100%;
+    height: 100vh;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    transition: 0.7s;
+    z-index: 999;
+    background-color: rgba(254, 254, 254, 0.257);
+  }
+  #check:checked ~ .menu-bar {
+    right: 0;
+  }
+}
+
+.swiper {
+  width: 100%;
+  height: 100%;
+}
+
+.swiper-slide {
+  text-align: center;
+  font-size: 18px;
+  display: flex;
+}
+
+.swiper-slide img {
+  display: block;
+  height: 100%;
+  object-fit: cover;
+}
